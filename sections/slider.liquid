@@ -119,7 +119,10 @@
  <div class="swiper-container slideshow--{{ section.settings.slide_height }}">
    <div class="swiper-wrapper">
      <div class="swiper-slide">
-		<div class="slide-overlay">
+		{% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
+    </div>
+{% endif %}
 		</div>
             <img src="https://picsum.photos/500/300">
             <div class="slide-content 
@@ -135,7 +138,10 @@
             </div>
      </div>
      <div class="swiper-slide">
-                <div class="slide-overlay">
+                {% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
+    </div>
+{% endif %}
                 </div>
            <img src="https://picsum.photos/500/301">
             <div class="slide-content
@@ -149,7 +155,10 @@
             </div>
      </div>
      <div class="swiper-slide">
-                <div class="slide-overlay">
+                {% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
+    </div>
+{% endif %}
                 </div>
             <img src="https://picsum.photos/500/302">
             <div class="slide-content 
