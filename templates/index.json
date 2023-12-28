@@ -82,6 +82,16 @@
             "button_label": "Button label",
             "button_link": ""
           }
+        },
+        "97f7ab7c-14a2-4339-894a-371735856776": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-in-suit-on-stairs.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
@@ -92,7 +102,8 @@
         "27526f66-f5de-4271-bd7c-2c9a6ef78556",
         "338b6090-d12f-4553-ad17-9a40a3abc616",
         "d3c3d4bc-acdf-4471-bdbf-4712e4bcbad5",
-        "7867c0bc-51de-4a32-8666-2bf4e358a3a1"
+        "7867c0bc-51de-4a32-8666-2bf4e358a3a1",
+        "97f7ab7c-14a2-4339-894a-371735856776"
       ],
       "settings": {
         "slide_height": "small",
@@ -100,7 +111,7 @@
         "text_alignment": "center center",
         "show_overlay": false,
         "auto": true,
-        "speed": 5
+        "speed": 3
       }
     },
     "image_banner": {
