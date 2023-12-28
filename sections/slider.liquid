@@ -140,6 +140,31 @@
       padding: 5px 10px;
     }
   }
+/* ナビゲーションボタンのスタイリング */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '\203A'; /* ナビゲーションボタンのアイコン（右矢印） */
+  font-size: 20px;
+  color: #333; /* ボタンの色 */
+}
+
+.swiper-button-prev::after {
+  content: '\2039'; /* ナビゲーションボタンのアイコン（左矢印） */
+}
+
 </style>
 
 
