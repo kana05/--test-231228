@@ -1,14 +1,17 @@
 <h1>スライダー</h1>
 <style>
+<style>
   .swiper-container {
     max-height: 100vh;
     transition: height 0.6s cubic-bezier(0.44, 0.13, 0.48, 0.87);
   }
 
-.swiper-slide {
+  .swiper-slide {
     position: relative;
-    width: 33.33%; /* 3枚ずつ表示のために追加 */
- }
+    width: 33.33%;
+    float: left; /* 追加 */
+    box-sizing: border-box; /* 追加 */
+  }
 
   .swiper-slide img {
     width: 100%;
@@ -35,94 +38,112 @@
     padding: 20px;
     transform: translateY(-50%);
   }
-}
-@media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content{
-        padding: 0px;
+
+  @media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content {
+      padding: 0px;
     }
-}
-.swiper-slide .slide-content.center{
+  }
+
+  .swiper-slide .slide-content.center {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-}
-.swiper-slide .slide-content.left{
+  }
+
+  .swiper-slide .slide-content.left {
     left: 0%;
     transform: translateX(0%) translateY(-50%);
     text-align: left;
-}
-.swiper-slide .slide-content.right{
+  }
+
+  .swiper-slide .slide-content.right {
     right: 0%;
     transform: translateX(0%) translateY(-50%);
     text-align: right;
-}
-.swiper-slide .slide-content h2{
+  }
+
+  .swiper-slide .slide-content h2 {
     color: #FFF !important;
     margin: 0px;
-}
-.swiper-slide .slide-content p{
+  }
+
+  .swiper-slide .slide-content p {
     margin: 0px;
-}
-.slideshow--small {
-  height: 175px; 
-}
-@media only screen and (min-width: 750px) {
-    .slideshow--small{
-      height: 475px; 
-    } 
-}
-.slideshow--medium {
-    height: 270px; 
-}
-@media only screen and (min-width: 750px) {
-    .slideshow--medium{
-      height: 650px; 
+  }
+
+  .slideshow--small {
+    height: 175px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .slideshow--small {
+      height: 475px;
     }
-}
-.slideshow--large{
-    height: 375px; 
-}
-@media only screen and (min-width: 750px) {
+  }
+
+  .slideshow--medium {
+    height: 270px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    .slideshow--medium {
+      height: 650px;
+    }
+  }
+
+  .slideshow--large {
+    height: 375px;
+  }
+
+  @media only screen and (min-width: 750px) {
     .slideshow--large {
-      height: 775px; 
-    } 
-}
-.swiper-slide .slide-content h2.mega-title--large{
+      height: 775px;
+    }
+  }
+
+  .swiper-slide .slide-content h2.mega-title--large {
     font-size: 45px;
-}
-.swiper-slide .slide-content p.mega-desc--large{
+  }
+
+  .swiper-slide .slide-content p.mega-desc--large {
     font-size: 22px;
-}
-@media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content h2{
-        font-size: 18px;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content h2 {
+      font-size: 18px;
     }
-    .swiper-slide .slide-content p{
-        font-size: 12px;
+    .swiper-slide .slide-content p {
+      font-size: 12px;
     }
-    .swiper-slide .slide-content h2.mega-title--large{
-        font-size: 22px;
+    .swiper-slide .slide-content h2.mega-title--large {
+      font-size: 22px;
     }
-    .swiper-slide .slide-content p.mega-desc--large{
-        font-size: 14px;
+    .swiper-slide .slide-content p.mega-desc--large {
+      font-size: 14px;
     }
-}
-.slideshow__btn{
+  }
+
+  .slideshow__btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: red;
     color: #fff;
     text-decoration: none;
-}
-@media only screen and (max-width: 750px) {
-    .slideshow__btn{
-        display: inline-block;
-        margin-top: 10px;
-        padding: 5px 10px;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .slideshow__btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
     }
- }
- </style>
+  }
+</style>
+
+
 
  <div class="swiper-container slideshow--{{ section.settings.slide_height }}">
    <div class="swiper-wrapper">
