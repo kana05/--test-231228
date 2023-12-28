@@ -107,9 +107,9 @@
       ],
       "settings": {
         "slide_height": "small",
-        "text_size": "large",
+        "text_size": "medium",
         "text_alignment": "center center",
-        "show_overlay": false,
+        "show_overlay": true,
         "auto": true,
         "speed": 3
       }
