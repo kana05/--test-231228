@@ -1,74 +1,39 @@
-<!-- slider.liquid -->
-<div class="slider-container">
-  <div class="slider">
-    {% for block in section.blocks %}
-      
-      
-      <div class="slide" style="height: {{ block.settings.slide_height }};">
-        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.slide_title }}">
-        <div class="slide-content" style="text-align: {{ block.settings.text_alignment }};">
-          <h2 style="font-size: {{ block.settings.text_size }};">{{ block.settings.slide_title }}</h2>
-          <p>{{ block.settings.subheading }}</p>
-          {% if block.settings.button_label != blank %}
-            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
-          {% endif %}
-        </div>
-      </div>
-      
-      
-    {% endfor %}
-  </div>
-</div>
-
-<style>
-/* Add your custom styles here */
-  .slider-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide-group {
-    display: flex;
-    width: 300%; /* Adjust based on the number of slides per group */
-  }
-
-  .slide {
-    width: 33.33%; /* Adjust based on the number of slides per group */
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .slide-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff; /* Adjust text color as needed */
-  }
-
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000; /* Adjust button color as needed */
-    color: #fff; /* Adjust button text color as needed */
-    text-decoration: none;
-  }
-</style>
-
-<script>
-  // Add your custom JavaScript for slider functionality here
-  // You may use a JavaScript library like Swiper or Slick for slider functionality
+<h1>スライダー</h1>
+ <div class="swiper-container slideshow--small">
+   <div class="swiper-wrapper">
+     <div class="swiper-slide">
+		<div class="slide-overlay">
+		</div>
+            <img src="https://picsum.photos/500/300">
+            <div class="slide-content center">
+                <h2 class="mega-title--large">Slide Title 1</h2>
+                <p class="mega-desc--large">Lorem ipsum dolor sit amet, 
+  consectetur</p>
+           <a href="#" class="btn slideshow__btn">ボタンのラベル</a>
+            </div>
+     </div>
+     <div class="swiper-slide">
+                <div class="slide-overlay">
+                </div>
+           <img src="https://picsum.photos/500/301">
+            <div class="slide-content center">
+                <h2 class="mega-title--large">Slide Title 2</h2>
+                <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
+                <a href="#" class="btn slideshow__btn">ボタンのラベル+ </a>
+            </div>
+     </div>
+     <div class="swiper-slide">
+                <div class="slide-overlay">
+                </div>
+            <img src="https://picsum.photos/500/302">
+            <div class="slide-content center">
+                <h2 class="mega-title--large">Slide Title 3</h2>
+              <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
+           <a href="#" class="btn slideshow__btn">ボタンのラベル</a>
+            </div>
+     </div>
+   </div>
+ </div>
 {% schema %}
     {
         "name": "スライダーsample",
@@ -160,7 +125,7 @@
             {
                 "type": "slide",
                 "name": "画像スライド",
-                "limit": 9,
+                "limit": 3,
                 "settings": [
                     {
                         "type": "image_picker",
