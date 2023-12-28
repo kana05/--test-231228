@@ -1,9 +1,9 @@
 {
   "sections": {
-    "9091b8d7-2ae5-4a15-8a82-fecb0581894f": {
+    "f48bb0b9-2c10-4062-af51-15642c57f78b": {
       "type": "slider",
       "blocks": {
-        "31b7004a-e927-486f-9bec-4257642697ba": {
+        "f6db1749-739e-4207-8d46-86b67243d965": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg",
@@ -12,39 +12,17 @@
             "button_label": "Button label",
             "button_link": ""
           }
-        },
-        "29509c35-6eb8-4379-9b48-1834a84ce885": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-            "slide_title": "見出しが入ります。",
-            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "72207dc2-e7a4-4e35-a972-a24acada7656": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "slide_title": "見出しが入ります。",
-            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
-            "button_label": "Button label",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
-        "31b7004a-e927-486f-9bec-4257642697ba",
-        "29509c35-6eb8-4379-9b48-1834a84ce885",
-        "72207dc2-e7a4-4e35-a972-a24acada7656"
+        "f6db1749-739e-4207-8d46-86b67243d965"
       ],
       "settings": {
         "slide_height": "adapt",
         "text_size": "medium",
         "text_alignment": "center center",
         "show_overlay": true,
-        "auto": true,
+        "auto": false,
         "speed": 5
       }
     },
@@ -261,7 +239,7 @@
     }
   },
   "order": [
-    "9091b8d7-2ae5-4a15-8a82-fecb0581894f",
+    "f48bb0b9-2c10-4062-af51-15642c57f78b",
     "image_banner",
     "rich_text",
     "featured_collection",
