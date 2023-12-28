@@ -85,6 +85,7 @@
         },
         "57b4065b-a8ac-4246-9dc8-1a445c495b3f": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/hands-slice-red-pepper-on-wooden-cutting-board.jpg",
             "slide_title": "見出しが入ります。",
