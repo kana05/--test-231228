@@ -1,25 +1,19 @@
 <h1>スライダー</h1>
 <style>
-  .swiper-container {
+.swiper-container{
     max-height: 100vh;
-    transition: height 0.6s cubic-bezier(0.44, 0.13, 0.48, 0.87);
-  }
-
-  .swiper-slide {
+    transition: height .6s cubic-bezier(.44, .13, .48, .87);
+}
+.swiper-slide{
     position: relative;
-    width: 33.33%;
-    float: left; /* 追加 */
-    box-sizing: border-box; /* 追加 */
-  }
-
-  .swiper-slide img {
+}
+.swiper-slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     vertical-align: bottom;
-  }
-
-  .slide-overlay::before {
+}
+.slide-overlay::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -28,163 +22,255 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(204, 204, 204, 0.8);
-  }
-
-  .swiper-slide .slide-content {
+    background-color: rgba(204,204,204,0.8);
+}
+.swiper-slide .slide-content{
     position: absolute;
     top: 50%;
     padding: 20px;
-    transform: translateY(-50%);
-  }
-
-  @media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content {
-      padding: 0px;
+}
+@media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content{
+        padding: 0px;
     }
-  }
-
-  .swiper-slide .slide-content.center {
+}
+.swiper-slide .slide-content.center{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-  }
-
-  .swiper-slide .slide-content.left {
+}
+.swiper-slide .slide-content.left{
     left: 0%;
     transform: translateX(0%) translateY(-50%);
     text-align: left;
-  }
-
-  .swiper-slide .slide-content.right {
+}
+.swiper-slide .slide-content.right{
     right: 0%;
     transform: translateX(0%) translateY(-50%);
     text-align: right;
-  }
-
-  .swiper-slide .slide-content h2 {
+}
+.swiper-slide .slide-content h2{
     color: #FFF !important;
     margin: 0px;
-  }
-
-  .swiper-slide .slide-content p {
+}
+.swiper-slide .slide-content p{
     margin: 0px;
-  }
-
-  .slideshow--small {
-    height: 175px;
-  }
-
-  @media only screen and (min-width: 750px) {
-    .slideshow--small {
-      height: 475px;
+}
+.slideshow--small {
+  height: 175px; 
+}
+@media only screen and (min-width: 750px) {
+    .slideshow--small{
+      height: 475px; 
+    } 
+}
+.slideshow--medium {
+    height: 270px; 
+}
+@media only screen and (min-width: 750px) {
+    .slideshow--medium{
+      height: 650px; 
     }
-  }
-
-  .slideshow--medium {
-    height: 270px;
-  }
-
-  @media only screen and (min-width: 750px) {
-    .slideshow--medium {
-      height: 650px;
-    }
-  }
-
-  .slideshow--large {
-    height: 375px;
-  }
-
-  @media only screen and (min-width: 750px) {
+}
+.slideshow--large{
+    height: 375px; 
+}
+@media only screen and (min-width: 750px) {
     .slideshow--large {
-      height: 775px;
-    }
-  }
-
-  .swiper-slide .slide-content h2.mega-title--large {
+      height: 775px; 
+    } 
+}
+.swiper-slide .slide-content h2.mega-title--large{
     font-size: 45px;
-  }
-
-  .swiper-slide .slide-content p.mega-desc--large {
+}
+.swiper-slide .slide-content p.mega-desc--large{
     font-size: 22px;
-  }
-
-  @media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content h2 {
-      font-size: 18px;
+}
+@media only screen and (max-width: 750px) {
+    .swiper-slide .slide-content h2{
+        font-size: 18px;
     }
-    .swiper-slide .slide-content p {
-      font-size: 12px;
+    .swiper-slide .slide-content p{
+        font-size: 12px;
     }
-    .swiper-slide .slide-content h2.mega-title--large {
-      font-size: 22px;
+    .swiper-slide .slide-content h2.mega-title--large{
+        font-size: 22px;
     }
-    .swiper-slide .slide-content p.mega-desc--large {
-      font-size: 14px;
+    .swiper-slide .slide-content p.mega-desc--large{
+        font-size: 14px;
     }
-  }
-
-  .slideshow__btn {
+}
+.slideshow__btn{
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: red;
     color: #fff;
     text-decoration: none;
-  }
-
-  @media only screen and (max-width: 750px) {
-    .slideshow__btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 5px 10px;
+}
+@media only screen and (max-width: 750px) {
+    .slideshow__btn{
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
     }
-  }
-</style>
+ }
+ /*ナビゲーションのカスタマイズ*/
+	.slider-other-menu{
+	    position: absolute;
+	    bottom: 10px;
+	    transform: translateX(50%);
+	    right: 50%;
+	    left: auto;
+	    width: 151px;
+	    height: 44px;
+	    background-color: rgba(0,0,0,.4);
+	    color: rgba(255,255,255,.5);
+	    z-index: 1;
+	}
+	.swiper-pagination-clickable .swiper-pagination-bullet{
+	    margin: -4px 10px;
+	}
+	.swiper-pagination {
+	    top: 4px;
+	    left: 32px;
+	}
+	.swiper-pagination-bullet-active{
+	    background: #fff;
+	}
+	.swiper-pagination-bullet{
+	    background: rgb(255,255,255);
+	}
+	.swiper-button-prev, .swiper-button-next{
+	    display: block !important; 
+	    bottom: -10px;
+	    top: auto;
+	    color: rgba(255,255,255,.5);
+	}
+	.swiper-button-next:after, .swiper-button-prev:after{
+	    font-size:15px;
+	}
+	.swiper-button-prev{
+	    left: calc(50% - 125px / 2);
+	}
+	.swiper-button-next{
+	    right: calc(50% - 155px / 2);
+	}
 
-
-
-<div class="swiper-container slideshow--{{ section.settings.slide_height }}">
-  <div class="swiper-wrapper">
-    {%- for block in section.blocks -%}
-    <div class="swiper-slide">
-      <div class="slide-overlay">
-      </div>
-      {%- if block.settings.image != blank -%}
-      <img src="{{ block.settings.image | img_url: '2049x' }}" loading="lazy">
-      {%- else -%}
-      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-      <div class="slide-content 
-        {% if section.settings.text_alignment == 'center center' %} center {% endif %}
-        {% if section.settings.text_alignment == 'left center' %} left {% endif %}
-        {% if section.settings.text_alignment == 'right center' %} right {% endif %}
-      ">
-        <h2 class="{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}">{{ block.settings.slide_title }}</h2>
-        <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
-        <a href="{{ block.settings.button_link }}" class="slideshow__btn">{{ block.settings.button_label | escape }}</a>
-      </div>
+ </style>
+ <div class="swiper-container slideshow--{{ section.settings.slide_height }}">
+   <div class="swiper-wrapper">
+{%- for block in section.blocks -%}
+     <div class="swiper-slide">
+		{% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
     </div>
-    {%- endfor -%}
-  </div>
-</div>
+{% endif %}
+            {%- if block.settings.image != blank -%}
+	<img src="{{ block.settings.image | img_url: '2049x' }}"  loading="lazy">
+{%- else -%}
+	{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+{%- endif -%}
+            <div class="slide-content 
+{% if section.settings.text_alignment == 'center center' %} center {% endif %}
+{% if section.settings.text_alignment == 'left center' %} left {% endif %}
+{% if section.settings.text_alignment == 'right center' %} right {% endif %}
+">
+                <h1 class="{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}">{{ block.settings.slide_title }}</h1>
+                <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
+  consectetur</p>
+            {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+  <a href="{{ block.settings.button_link }}" class="slideshow__btn">{{ block.settings.button_label | escape }}</a>
+{%- endif -%}
 
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
+            </div>
+     </div>
+
+     {%- endfor -%}
+     <div class="swiper-slide">
+                {% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
+    </div>
+{% endif %}
+           {%- if block.settings.image != blank -%}
+	<img src="{{ block.settings.image | img_url: '2049x' }}"  loading="lazy">
+{%- else -%}
+	{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+{%- endif -%}
+            <div class="slide-content 
+{% if section.settings.text_alignment == 'center center' %} center {% endif %}
+{% if section.settings.text_alignment == 'left center' %} left {% endif %}
+{% if section.settings.text_alignment == 'right center' %} right {% endif %}
+">
+                <h2 class="mega-title--large">Slide Title 2</h2>
+                <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
+                 {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+  <a href="{{ block.settings.button_link }}" class="slideshow__btn">{{ block.settings.button_label | escape }}</a>
+{%- endif -%}
+
+            </div>
+     </div>
+     <div class="swiper-slide">
+                {% if section.settings.show_overlay == true %}
+    <div class="slide-overlay">
+    </div>
+{% endif %}
+                </div>
+            {%- if block.settings.image != blank -%}
+	<img src="{{ block.settings.image | img_url: '2049x' }}"  loading="lazy">
+{%- else -%}
+	{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+{%- endif -%}
+            <div class="slide-content 
+{% if section.settings.text_alignment == 'center center' %} center {% endif %}
+{% if section.settings.text_alignment == 'left center' %} left {% endif %}
+{% if section.settings.text_alignment == 'right center' %} right {% endif %}
+">
+                <h2 class="mega-title--large">Slide Title 3</h2>
+              <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
+            {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+  <a href="{{ block.settings.button_link }}" class="slideshow__btn">{{ block.settings.button_label | escape }}</a>
+{%- endif -%}
+
+            </div><!-- swiper-wrapper -->
+<div class="slider-other-menu">
+	<!-- 前ページボタン -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-pagination"></div>
+	<!-- 次ページボタン -->
+	<div class="swiper-button-next"></div>
+ </div>
+     </div>
+   </div>
+ </div><!-- slider-container -->
+
+ <script type="text/javascript">  
   const swiper = new Swiper('.swiper-container', {
-    autoplay: {
-      delay: {{ section.settings.speed }} * 1000,
-    },
+    // 自動再生（true:自動再生する、false:自動再生しない）
+     autoplay: {
+         delay: {{ section.settings.speed }} * 1000,
+     },
+    // スライド方向（水平方向）
     direction: 'horizontal',
+    // エフェクト（true:フェードアニメーション、false:スライドアニメーション）
     effect: 'fade',
+    // ループ
     loop: true,
+    // 表示枚数
     slidesPerView: 3,
-    pagination: false,
-    navigation: {
-    }
+      // ページネーション（true:表示、false:非表示）
+   pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    // ページ送りボタン（true:表示、false:非表示）
+   navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+   }
   });
-});
-</script>
+ </script>
 
 
 {% schema %}
