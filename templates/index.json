@@ -45,7 +45,7 @@
         "text_alignment": "center center",
         "show_overlay": true,
         "auto": true,
-        "speed": 5
+        "speed": 3
       }
     },
     "image_banner": {
