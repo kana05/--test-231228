@@ -154,7 +154,7 @@
 {% if section.settings.text_alignment == 'right center' %} right {% endif %}
 ">
                 <h2 class="mega-title--large">Slide Title 2</h2>
-                <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
+                <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
                 <a href="#" class="btn slideshow__btn">ボタンのラベル+ </a>
             </div>
      </div>
@@ -172,7 +172,7 @@
 {% if section.settings.text_alignment == 'right center' %} right {% endif %}
 ">
                 <h2 class="mega-title--large">Slide Title 3</h2>
-              <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
+              <p class="{% if section.settings.text_size == 'large' %} mega-desc--large{% endif %}">{{ block.settings.subheading }}</p>
            <a href="#" class="btn slideshow__btn">ボタンのラベル</a>
             </div>
      </div>
