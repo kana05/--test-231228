@@ -12,17 +12,39 @@
             "button_label": "Button label",
             "button_link": ""
           }
+        },
+        "76791b70-6024-4146-a4aa-c9529916337e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "7b10a01c-6e6b-4b09-9b74-4717c5ef7915": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "f6db1749-739e-4207-8d46-86b67243d965"
+        "f6db1749-739e-4207-8d46-86b67243d965",
+        "76791b70-6024-4146-a4aa-c9529916337e",
+        "7b10a01c-6e6b-4b09-9b74-4717c5ef7915"
       ],
       "settings": {
         "slide_height": "small",
         "text_size": "medium",
         "text_alignment": "center center",
         "show_overlay": true,
-        "auto": false,
+        "auto": true,
         "speed": 5
       }
     },
