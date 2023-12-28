@@ -40,11 +40,11 @@
         "17ec1505-b559-4cc9-a0f0-745df834c799"
       ],
       "settings": {
-        "slide_height": "adapt",
+        "slide_height": "small",
         "text_size": "medium",
         "text_alignment": "center center",
         "show_overlay": true,
-        "auto": false,
+        "auto": true,
         "speed": 5
       }
     },
