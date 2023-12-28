@@ -1,5 +1,31 @@
 {
   "sections": {
+    "f7388cec-e9ad-4b92-8711-4c00c55cc6ba": {
+      "type": "slider",
+      "blocks": {
+        "2e66d978-c3db-41fd-84fd-c435760f9e42": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "2e66d978-c3db-41fd-84fd-c435760f9e42"
+      ],
+      "settings": {
+        "slide_height": "adapt",
+        "text_size": "medium",
+        "text_alignment": "center center",
+        "show_overlay": true,
+        "auto": false,
+        "speed": 5
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -210,26 +236,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "f7388cec-e9ad-4b92-8711-4c00c55cc6ba": {
-      "type": "slider",
-      "settings": {
-        "slide_height": "adapt",
-        "text_size": "medium",
-        "text_alignment": "center center",
-        "show_overlay": true,
-        "auto": false,
-        "speed": 5
-      }
     }
   },
   "order": [
+    "f7388cec-e9ad-4b92-8711-4c00c55cc6ba",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "f7388cec-e9ad-4b92-8711-4c00c55cc6ba"
+    "multicolumn"
   ]
 }
