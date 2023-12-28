@@ -12,10 +12,32 @@
             "button_label": "Button label",
             "button_link": ""
           }
+        },
+        "c2c32db1-439c-4d54-94a5-f2baa487cbcd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "17ec1505-b559-4cc9-a0f0-745df834c799": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-holding-coffee-mug.jpg",
+            "slide_title": "見出しが入ります。",
+            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
+            "button_label": "Button label",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "2e66d978-c3db-41fd-84fd-c435760f9e42"
+        "2e66d978-c3db-41fd-84fd-c435760f9e42",
+        "c2c32db1-439c-4d54-94a5-f2baa487cbcd",
+        "17ec1505-b559-4cc9-a0f0-745df834c799"
       ],
       "settings": {
         "slide_height": "adapt",
