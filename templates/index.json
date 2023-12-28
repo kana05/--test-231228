@@ -82,17 +82,6 @@
             "button_label": "Button label",
             "button_link": ""
           }
-        },
-        "57b4065b-a8ac-4246-9dc8-1a445c495b3f": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/hands-slice-red-pepper-on-wooden-cutting-board.jpg",
-            "slide_title": "見出しが入ります。",
-            "subheading": "あなたのブランドのストーリーをビデオや画像で伝える",
-            "button_label": "Button label",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
@@ -103,8 +92,7 @@
         "27526f66-f5de-4271-bd7c-2c9a6ef78556",
         "338b6090-d12f-4553-ad17-9a40a3abc616",
         "d3c3d4bc-acdf-4471-bdbf-4712e4bcbad5",
-        "7867c0bc-51de-4a32-8666-2bf4e358a3a1",
-        "57b4065b-a8ac-4246-9dc8-1a445c495b3f"
+        "7867c0bc-51de-4a32-8666-2bf4e358a3a1"
       ],
       "settings": {
         "slide_height": "small",
