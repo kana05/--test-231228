@@ -1,19 +1,23 @@
 <h1>スライダー</h1>
 <style>
-.swiper-container{
+  .swiper-container {
     max-height: 100vh;
-    transition: height .6s cubic-bezier(.44, .13, .48, .87);
-}
-.swiper-slide{
+    transition: height 0.6s cubic-bezier(0.44, 0.13, 0.48, 0.87);
+  }
+
+  .swiper-slide {
     position: relative;
-}
-.swiper-slide img{
+    width: 33.33%; /* 3枚ずつ表示のために追加 */
+  }
+
+  .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     vertical-align: bottom;
-}
-.slide-overlay::before{
+  }
+
+  .slide-overlay::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -22,12 +26,15 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(204,204,204,0.8);
-}
-.swiper-slide .slide-content{
+    background-color: rgba(204, 204, 204, 0.8);
+  }
+
+  .swiper-slide .slide-content {
     position: absolute;
     top: 50%;
     padding: 20px;
+    transform: translateY(-50%);
+  }
 }
 @media only screen and (max-width: 750px) {
     .swiper-slide .slide-content{
