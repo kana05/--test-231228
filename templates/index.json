@@ -7,8 +7,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg",
-            "slide_title": "見出しが入ります。",
-            "subheading": "テスト見出し",
+            "slide_title": "緑色",
+            "subheading": "テスト小見出し",
             "button_label": "Button label",
             "button_link": ""
           }
