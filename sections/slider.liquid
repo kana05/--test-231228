@@ -1,182 +1,77 @@
-<h1>スライダー</h1>
+<!-- slider.liquid -->
+<div class="slider-container">
+  <div class="slider">
+    {% for block in section.blocks %}
+      
+      
+      <div class="slide" style="height: {{ block.settings.slide_height }};">
+        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.slide_title }}">
+        <div class="slide-content" style="text-align: {{ block.settings.text_alignment }};">
+          <h2 style="font-size: {{ block.settings.text_size }};">{{ block.settings.slide_title }}</h2>
+          <p>{{ block.settings.subheading }}</p>
+          {% if block.settings.button_label != blank %}
+            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
+          {% endif %}
+        </div>
+      </div>
+      
+      
+    {% endfor %}
+  </div>
+</div>
+
 <style>
-.swiper-container{
-    max-height: 100vh;
-    transition: height .6s cubic-bezier(.44, .13, .48, .87);
-}
-.swiper-slide{
-    position: relative;
-}
-.swiper-slide img{
+/* Add your custom styles here */
+  .slider-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-}
-.slide-overlay::before{
-    content: '';
-    position: absolute;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide-group {
+    display: flex;
+    width: 300%; /* Adjust based on the number of slides per group */
+  }
+
+  .slide {
+    width: 33.33%; /* Adjust based on the number of slides per group */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .slide img {
     width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(204,204,204,0.8);
-}
-.swiper-slide .slide-content{
+    height: auto;
+    display: block;
+  }
+
+  .slide-content {
     position: absolute;
     top: 50%;
-    padding: 20px;
-}
-@media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content{
-        padding: 0px;
-    }
-}
-.swiper-slide .slide-content.center{
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-}
-.swiper-slide .slide-content.left{
-    left: 0%;
-    transform: translateX(0%) translateY(-50%);
-    text-align: left;
-}
-.swiper-slide .slide-content.right{
-    right: 0%;
-    transform: translateX(0%) translateY(-50%);
-    text-align: right;
-}
-.swiper-slide .slide-content h2{
-    color: #FFF !important;
-    margin: 0px;
-}
-.swiper-slide .slide-content p{
-    margin: 0px;
-}
-.slideshow--small {
-  height: 175px; 
-}
-@media only screen and (min-width: 750px) {
-    .slideshow--small{
-      height: 475px; 
-    } 
-}
-.slideshow--medium {
-    height: 270px; 
-}
-@media only screen and (min-width: 750px) {
-    .slideshow--medium{
-      height: 650px; 
-    }
-}
-.slideshow--large{
-    height: 375px; 
-}
-@media only screen and (min-width: 750px) {
-    .slideshow--large {
-      height: 775px; 
-    } 
-}
-.swiper-slide .slide-content h2.mega-title--large{
-    font-size: 45px;
-}
-.swiper-slide .slide-content p.mega-desc--large{
-    font-size: 22px;
-}
-@media only screen and (max-width: 750px) {
-    .swiper-slide .slide-content h2{
-        font-size: 18px;
-    }
-    .swiper-slide .slide-content p{
-        font-size: 12px;
-    }
-    .swiper-slide .slide-content h2.mega-title--large{
-        font-size: 22px;
-    }
-    .swiper-slide .slide-content p.mega-desc--large{
-        font-size: 14px;
-    }
-}
-.slideshow__btn{
+    transform: translate(-50%, -50%);
+    color: #fff; /* Adjust text color as needed */
+  }
+
+  .button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: red;
-    color: #fff;
+    background-color: #000; /* Adjust button color as needed */
+    color: #fff; /* Adjust button text color as needed */
     text-decoration: none;
-}
-@media only screen and (max-width: 750px) {
-    .slideshow__btn{
-        display: inline-block;
-        margin-top: 10px;
-        padding: 5px 10px;
-    }
- }
- </style>
+  }
+</style>
 
-<div class="swiper-container slideshow--{{ section.settings.slide_height }}">
-   <div class="swiper-wrapper">
-     <div class="swiper-slide">
-		<div class="slide-overlay">
-		</div>
-            <img src="https://picsum.photos/500/300">
-            <div class="slide-content center">
-                <h2 class="mega-title--large">Slide Title 1</h2>
-                <p class="mega-desc--large">Lorem ipsum dolor sit amet, 
-  consectetur</p>
-           <a href="#" class="btn slideshow__btn">ボタンのラベル</a>
-            </div>
-     </div>
-     <div class="swiper-slide">
-                <div class="slide-overlay">
-                </div>
-           <img src="https://picsum.photos/500/301">
-            <div class="slide-content center">
-                <h2 class="mega-title--large">Slide Title 2</h2>
-                <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
-                <a href="#" class="btn slideshow__btn">ボタンのラベル+ </a>
-            </div>
-     </div>
-     <div class="swiper-slide">
-                <div class="slide-overlay">
-                </div>
-            <img src="https://picsum.photos/500/302">
-            <div class="slide-content center">
-                <h2 class="mega-title--large">Slide Title 3</h2>
-              <p class="mega-desc--large">Lorem ipsum dolor sit amet, +consectetur</p>
-           <a href="#" class="btn slideshow__btn">ボタンのラベル</a>
-            </div>
-     </div>
-   </div>
- </div>
-
- <script type="text/javascript">  
-  const swiper = new Swiper('.swiper-container', {
-    // 自動再生（true:自動再生する、false:自動再生しない）
-     autoplay: {
-         delay: 9000,
-     },
-    // スライド方向（水平方向）
-    direction: 'horizontal',
-    // エフェクト（true:フェードアニメーション、false:スライドアニメーション）
-    effect: 'fade',
-    // ループ
-    loop: true,
-    // 表示枚数
-    slidesPerView: 1,
-    // ページネーション（true:表示、false:非表示）
-    pagination: false,
-    // ページ送りボタン（true:表示、false:非表示）
-    navigation: false
-  });
- </script>
-
+<script>
+  // Add your custom JavaScript for slider functionality here
+  // You may use a JavaScript library like Swiper or Slick for slider functionality
 {% schema %}
     {
-        "name": "スライダー",
+        "name": "スライダーsample",
         "class": "slide-wrap",
         "settings": [
             {
@@ -265,7 +160,7 @@
             {
                 "type": "slide",
                 "name": "画像スライド",
-                "limit": 3,
+                "limit": 9,
                 "settings": [
                     {
                         "type": "image_picker",
